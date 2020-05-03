@@ -10,9 +10,8 @@
 - block:
     - name: Install GPAC build packages
       package:
-        name: '{{ item }}'
+        name: '{{ gpac_build_packages }}'
         state: present
-      loop: '{{ gpac_build_packages }}'
 
     - name: Clone GPAC source code
       git:
